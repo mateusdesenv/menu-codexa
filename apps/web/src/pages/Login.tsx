@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Card, useToast, Icon } from 'codexa-ui'
 import { useAuth } from '../contexts/AuthContext'
-import menuCodexaLogo from 'codexa-ui/logos/menu-codexa-logo-variations/horizontal-primary-light.svg'
+import menuCodexaLogoLight from 'codexa-ui/logos/menu-codexa-logo-variations/horizontal-primary-transparent.svg'
+import menuCodexaLogoDark from 'codexa-ui/logos/menu-codexa-logo-variations/horizontal-reversed-transparent.svg'
 
 export default function Login() {
   const { loginWithGoogle } = useAuth()
@@ -26,7 +27,7 @@ export default function Login() {
     <div className="login-page">
       <div className="login-hero">
         <div className="login-hero-content">
-          <img src={menuCodexaLogo} alt="Menu Codexa" height="48" />
+          <img src={menuCodexaLogoDark} alt="Menu Codexa" height="48" />
           <h2 className="login-hero-title">
             Seu cardápio pessoal, organizado e prático.
           </h2>
@@ -52,6 +53,9 @@ export default function Login() {
       </div>
       <div className="login-form">
         <Card padding="large" className="login-card">
+          <div className="login-brand">
+            <img src={menuCodexaLogoLight} alt="Menu Codexa" height="40" />
+          </div>
           <h1 className="login-title">Bem-vindo</h1>
           <p className="login-description">
             Entre para montar seu cardápio e decidir com facilidade o que
