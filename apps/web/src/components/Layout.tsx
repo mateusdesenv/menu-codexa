@@ -17,7 +17,7 @@ export function Layout() {
     <div className="app-shell">
       <header className="app-header">
         <Link to="/" className="app-logo">
-          <strong>Menu Codexa</strong>
+          <img src="/assets/menu-codexa-logo-variations/horizontal-primary-light.png" alt="Menu Codexa" height="32" />
         </Link>
         <nav className="app-nav">
           {navItems.map((item) => (
