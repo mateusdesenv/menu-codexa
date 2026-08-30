@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { Button, Icon, Avatar } from 'codexa-ui'
 import { useAuth } from '../contexts/AuthContext'
+import menuCodexaLogo from 'codexa-ui/logos/menu-codexa-logo-variations/horizontal-primary-light.svg'
 
 export function Layout() {
   const { user, logout } = useAuth()
@@ -17,7 +18,7 @@ export function Layout() {
     <div className="app-shell">
       <header className="app-header">
         <Link to="/" className="app-logo">
-          <img src="/assets/menu-codexa-logo-variations/horizontal-primary-light.png" alt="Menu Codexa" height="32" />
+          <img src={menuCodexaLogo} alt="Menu Codexa" height="32" />
         </Link>
         <nav className="app-nav">
           {navItems.map((item) => (
