@@ -74,9 +74,23 @@ export function Layout() {
         aria-hidden="true"
       />
 
-      <main className="app-main">
-        <Outlet />
-      </main>
+      <div className="app-content">
+        <header className="app-topbar">
+          <h1 className="app-topbar-title">Menu Codexa</h1>
+          {user && (
+            <div className="app-topbar-user">
+              <Avatar name={user.name} src={user.photoUrl} size="small" />
+              <span className="app-topbar-name" title={user.name}>
+                {user.name}
+              </span>
+            </div>
+          )}
+        </header>
+
+        <main className="app-main">
+          <Outlet />
+        </main>
+      </div>
     </div>
   )
 }

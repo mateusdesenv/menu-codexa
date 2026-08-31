@@ -322,19 +322,64 @@ body {
   }
 }
 
+.app-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-md, 16px);
+  padding: var(--ds-space-md, 16px) var(--ds-space-lg, 24px);
+  background: var(--ds-white, #ffffff);
+  border-bottom: 1px solid var(--ds-line, #e8ebef);
+}
+
+.app-topbar-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ds-graphite, #11131a);
+}
+
+.app-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-sm, 8px);
+  min-width: 0;
+}
+
+.app-topbar-name {
+  font-size: 0.875rem;
+  color: var(--ds-charcoal, #313743);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
 .app-main {
   flex: 1;
   padding: var(--ds-space-lg, 24px);
-  padding-top: 72px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 1024px) {
-  .app-main {
+  .app-content {
     margin-left: 260px;
-    padding-top: var(--ds-space-lg, 24px);
+  }
+
+  .app-topbar {
+    padding-left: var(--ds-space-lg, 24px);
   }
 }
 
