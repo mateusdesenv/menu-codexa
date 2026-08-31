@@ -347,7 +347,12 @@ body {
 
 @media (min-width: 1024px) {
   .app-content {
-    margin-left: calc(260px + 2 * var(--ds-space-lg, 24px));
+    margin-left: 260px;
+  }
+
+  .app-topbar,
+  .app-main {
+    padding-left: 0;
   }
 }
 
