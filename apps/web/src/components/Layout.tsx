@@ -49,23 +49,6 @@ export function Layout() {
             </Link>
           ))}
         </nav>
-
-        <div className="app-sidebar-footer">
-          {user && (
-            <>
-              <div className="app-user">
-                <Avatar name={user.name} src={user.photoUrl} size="small" />
-                <span className="app-user-name" title={user.name}>
-                  {user.name}
-                </span>
-              </div>
-              <Button variant="ghost" size="small" onClick={logout}>
-                <Icon name="logout" size={18} />
-                <span>Sair</span>
-              </Button>
-            </>
-          )}
-        </div>
       </aside>
 
       <div
@@ -83,6 +66,16 @@ export function Layout() {
               <span className="app-topbar-name" title={user.name}>
                 {user.name}
               </span>
+              <Button
+                variant="ghost"
+                size="small"
+                onClick={logout}
+                className="app-topbar-logout"
+                iconOnly
+                aria-label="Sair"
+              >
+                <Icon name="logout" size={18} />
+              </Button>
             </div>
           )}
         </header>

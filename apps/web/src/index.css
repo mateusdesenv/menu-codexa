@@ -265,42 +265,6 @@ body {
   color: var(--ds-green-dark, #13992f);
 }
 
-.app-sidebar-footer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--ds-space-md, 16px);
-  margin-top: auto;
-  padding-top: var(--ds-space-lg, 24px);
-  border-top: 1px solid var(--ds-line, #e8ebef);
-}
-
-.app-user {
-  display: flex;
-  align-items: center;
-  gap: var(--ds-space-sm, 8px);
-  min-width: 0;
-}
-
-.app-user-name {
-  font-size: 0.875rem;
-  color: var(--ds-charcoal, #313743);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.app-sidebar-footer .app-user-name {
-  flex: 1;
-}
-
-.app-sidebar-footer button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--ds-space-sm, 8px);
-  width: 100%;
-}
-
 .app-overlay {
   position: fixed;
   inset: 0;
@@ -363,6 +327,14 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 180px;
+}
+
+.app-topbar-logout {
+  color: var(--ds-slate, #9ba3b0);
+}
+
+.app-topbar-logout:hover {
+  color: var(--ds-danger, #d32f2f);
 }
 
 .app-main {
